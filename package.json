@@ -1,6 +1,6 @@
 {
   "name": "vue-slim-loading",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "💇 开箱即用的 vue 加载组件，改造于 ElementUI/Loading",
   "author": "momoko <ko.momo@qq.com>",
   "license": "MIT",

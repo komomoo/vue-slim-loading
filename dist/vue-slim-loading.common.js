@@ -1,5 +1,5 @@
 /**
- * vue-slim-loading v1.0.0
+ * vue-slim-loading v1.0.1
  * Copyright (c) 2018-present, momoko <ko.momo@qq.com>
  * Released under the MIT License.
  */
@@ -45,7 +45,7 @@ function _objectSpread(target) {
 var objectSpread = _objectSpread;
 
 var name = "vue-slim-loading";
-var version = "1.0.0";
+var version = "1.0.1";
 var description = "💇 开箱即用的 vue 加载组件，改造于 ElementUI/Loading";
 var author = "momoko <ko.momo@qq.com>";
 var license = "MIT";
@@ -360,7 +360,7 @@ var __vue_staticRenderFns__$1 = [];
   /* style */
   const __vue_inject_styles__$1 = function (inject) {
     if (!inject) return
-    inject("data-v-0dada000_0", { source: ".vue-slim-loading-mask{position:absolute;z-index:1000;margin:0;top:0;right:0;bottom:0;left:0;background-color:rgba(255,255,255,.9);transition:opacity .3s}.vue-slim-loading-spinner{position:absolute;top:50%;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%);width:100%;text-align:center}.vue-slim-loading-spinner__text{color:#409eff;margin:3px 0;font-size:14px}.vue-slim-loading .loading-fade-enter,.vue-slim-loading .loading-fade-leave-active{opacity:0}", map: undefined, media: undefined });
+    inject("data-v-543588c2_0", { source: ".vue-slim-loading-mask{position:absolute;z-index:100;margin:0;top:0;right:0;bottom:0;left:0;background-color:rgba(255,255,255,.9);transition:opacity .3s}.vue-slim-loading-spinner{position:absolute;top:50%;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%);width:100%;text-align:center}.vue-slim-loading-spinner__text{color:#409eff;margin:3px 0;font-size:14px}.vue-slim-loading .loading-fade-enter,.vue-slim-loading .loading-fade-leave-active{opacity:0}", map: undefined, media: undefined });
 
   };
   /* scoped */
