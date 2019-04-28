@@ -10,6 +10,44 @@
   (global = global || self, global['vue-slim-loading'] = factory());
 }(this, function () { 'use strict';
 
+  function _defineProperty(obj, key, value) {
+    if (key in obj) {
+      Object.defineProperty(obj, key, {
+        value: value,
+        enumerable: true,
+        configurable: true,
+        writable: true
+      });
+    } else {
+      obj[key] = value;
+    }
+
+    return obj;
+  }
+
+  var defineProperty = _defineProperty;
+
+  function _objectSpread(target) {
+    for (var i = 1; i < arguments.length; i++) {
+      var source = arguments[i] != null ? arguments[i] : {};
+      var ownKeys = Object.keys(source);
+
+      if (typeof Object.getOwnPropertySymbols === 'function') {
+        ownKeys = ownKeys.concat(Object.getOwnPropertySymbols(source).filter(function (sym) {
+          return Object.getOwnPropertyDescriptor(source, sym).enumerable;
+        }));
+      }
+
+      ownKeys.forEach(function (key) {
+        defineProperty(target, key, source[key]);
+      });
+    }
+
+    return target;
+  }
+
+  var objectSpread = _objectSpread;
+
   var name = "vue-slim-loading";
   var version = "1.0.0";
   var description = "💇 开箱即用的 vue 加载组件，改造于 ElementUI/Loading";
@@ -23,6 +61,7 @@
   	"vue",
   	"slim-loading",
   	"vue-loading",
+  	"element-loading",
   	"v-loading"
   ];
   var main = "dist/vue-slim-loading.min.js";
@@ -100,7 +139,14 @@
 
   //
   var script = {
-    mixins: [mixin]
+    mixins: [mixin],
+    props: {
+      color: {
+        // 颜色
+        type: String,
+        default: '#409EFF'
+      }
+    }
   };
 
   function normalizeComponent(template, style, script, scopeId, isFunctionalTemplate, moduleIdentifier
@@ -242,13 +288,13 @@
   const __vue_script__ = script;
 
   /* template */
-  var __vue_render__ = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('svg',{class:_vm.c('-circular'),attrs:{"viewBox":"25 25 50 50"}},[_c('circle',{class:_vm.c('-circular__path'),attrs:{"cx":"50","cy":"50","r":"20","fill":"none"}})])};
+  var __vue_render__ = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('svg',{class:_vm.c('-circular'),attrs:{"viewBox":"25 25 50 50"}},[_c('circle',{class:_vm.c('-circular__path'),style:({'stroke': _vm.color}),attrs:{"cx":"50","cy":"50","r":"20","fill":"none"}})])};
   var __vue_staticRenderFns__ = [];
 
     /* style */
     const __vue_inject_styles__ = function (inject) {
       if (!inject) return
-      inject("data-v-5d029760_0", { source: ".vue-slim-loading-circular{height:42px;width:42px;-webkit-animation:loading-rotate 2s linear infinite;animation:loading-rotate 2s linear infinite}.vue-slim-loading-circular__path{-webkit-animation:loading-dash 1.5s ease-in-out infinite;animation:loading-dash 1.5s ease-in-out infinite;stroke-dasharray:90,150;stroke-dashoffset:0;stroke-width:2;stroke:#409eff;stroke-linecap:round}@-webkit-keyframes loading-rotate{100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}@keyframes loading-rotate{100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}@-webkit-keyframes loading-dash{0%{stroke-dasharray:1,200;stroke-dashoffset:0}50%{stroke-dasharray:90,150;stroke-dashoffset:-40px}100%{stroke-dasharray:90,150;stroke-dashoffset:-120px}}@keyframes loading-dash{0%{stroke-dasharray:1,200;stroke-dashoffset:0}50%{stroke-dasharray:90,150;stroke-dashoffset:-40px}100%{stroke-dasharray:90,150;stroke-dashoffset:-120px}}", map: undefined, media: undefined });
+      inject("data-v-3387adbe_0", { source: ".vue-slim-loading-circular{height:42px;width:42px;-webkit-animation:loading-rotate 2s linear infinite;animation:loading-rotate 2s linear infinite}.vue-slim-loading-circular__path{-webkit-animation:loading-dash 1.5s ease-in-out infinite;animation:loading-dash 1.5s ease-in-out infinite;stroke-dasharray:90,150;stroke-dashoffset:0;stroke-width:2;stroke:#409eff;stroke-linecap:round}@-webkit-keyframes loading-rotate{100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}@keyframes loading-rotate{100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}@-webkit-keyframes loading-dash{0%{stroke-dasharray:1,200;stroke-dashoffset:0}50%{stroke-dasharray:90,150;stroke-dashoffset:-40px}100%{stroke-dasharray:90,150;stroke-dashoffset:-120px}}@keyframes loading-dash{0%{stroke-dasharray:1,200;stroke-dashoffset:0}50%{stroke-dasharray:90,150;stroke-dashoffset:-40px}100%{stroke-dasharray:90,150;stroke-dashoffset:-120px}}", map: undefined, media: undefined });
 
     };
     /* scoped */
@@ -290,6 +336,11 @@
         type: String,
         default: null
       },
+      color: {
+        // 颜色
+        type: String,
+        default: '#409EFF'
+      },
       maskClass: {
         // 遮罩样式类
         type: Array,
@@ -307,13 +358,13 @@
   const __vue_script__$1 = script$1;
 
   /* template */
-  var __vue_render__$1 = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{class:_vm.c()},[_c('transition',{attrs:{"name":"loading-fade"}},[_c('div',{directives:[{name:"show",rawName:"v-show",value:(_vm.show),expression:"show"}],class:[_vm.c('-mask') ].concat( _vm.maskClass)},[_c('div',{class:[_vm.c('-spinner') ].concat( _vm.spinnerClass)},[_c('Circular'),_vm._v(" "),(_vm.text)?_c('p',{class:_vm.c('-spinner__text')},[_vm._v(_vm._s(_vm.text))]):_vm._e()],1)])])],1)};
+  var __vue_render__$1 = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{class:_vm.c()},[_c('transition',{attrs:{"name":"loading-fade"}},[_c('div',{directives:[{name:"show",rawName:"v-show",value:(_vm.show),expression:"show"}],class:[_vm.c('-mask') ].concat( _vm.maskClass)},[_c('div',{class:[_vm.c('-spinner') ].concat( _vm.spinnerClass)},[_c('Circular',{attrs:{"color":_vm.color}}),_vm._v(" "),(_vm.text)?_c('p',{class:_vm.c('-spinner__text'),style:({'color': _vm.color})},[_vm._v("\n          "+_vm._s(_vm.text)+"\n        ")]):_vm._e()],1)])])],1)};
   var __vue_staticRenderFns__$1 = [];
 
     /* style */
     const __vue_inject_styles__$1 = function (inject) {
       if (!inject) return
-      inject("data-v-f3327d1e_0", { source: ".vue-slim-loading-mask{position:absolute;z-index:1000;margin:0;top:0;right:0;bottom:0;left:0;background-color:rgba(255,255,255,.9);transition:opacity .3s}.vue-slim-loading-spinner{position:absolute;top:50%;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%);width:100%;text-align:center}.vue-slim-loading-spinner__text{color:#409eff;margin:3px 0;font-size:14px}.vue-slim-loading .loading-fade-enter,.vue-slim-loading .loading-fade-leave-active{opacity:0}", map: undefined, media: undefined });
+      inject("data-v-0dada000_0", { source: ".vue-slim-loading-mask{position:absolute;z-index:1000;margin:0;top:0;right:0;bottom:0;left:0;background-color:rgba(255,255,255,.9);transition:opacity .3s}.vue-slim-loading-spinner{position:absolute;top:50%;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%);width:100%;text-align:center}.vue-slim-loading-spinner__text{color:#409eff;margin:3px 0;font-size:14px}.vue-slim-loading .loading-fade-enter,.vue-slim-loading .loading-fade-leave-active{opacity:0}", map: undefined, media: undefined });
 
     };
     /* scoped */
@@ -359,28 +410,32 @@
   };
 
   SlimLoading.install = function (Vue) {
+    var option = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
     Vue.component(SlimLoading.name, SlimLoading);
     var Loading = Vue.extend(SlimLoading);
     Vue.directive('loading', {
       bind: function bind(el, binding, vnode) {
         var textExr = el.getAttribute('loading-text');
-        var vm = vnode.context;
+        var colorExr = el.getAttribute('loading-color');
         if (!getStyle(el, 'position')) el.style.position = 'relative';
         var div = document.createElement('div');
         el.appendChild(div);
         var loadingInstance = new Loading({
           el: div,
-          propsData: {
+          propsData: objectSpread({
             show: !!binding.value,
-            text: textExr || vm[textExr]
-          }
+            text: textExr || option.text,
+            color: colorExr || option.color
+          }, option)
         });
         el.loadingInstance = loadingInstance;
         el.loadingEl = loadingInstance.$el;
       },
       update: function update(el, binding) {
         var textExr = el.getAttribute('loading-text');
-        if (el.loadingInstance._props.text !== textExr) el.loadingInstance._props.text = textExr;
+        var colorExr = el.getAttribute('loading-color');
+        if (textExr && el.loadingInstance._props.text !== textExr) el.loadingInstance._props.text = textExr;
+        if (colorExr && el.loadingInstance._props.color !== colorExr) el.loadingInstance._props.color = colorExr;
         if (binding.oldValue !== binding.value) el.loadingInstance._props.show = !!binding.value;
       },
       unbind: function unbind(el, binding) {
