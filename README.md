@@ -1,6 +1,11 @@
 # vue-slim-loading
 
-> 开箱即用的 vue 加载组件
+> 开箱即用的 vue 加载组件，改造于 ElementUI/Loading
+
+## ✨ 特性
+
+- 开箱即用/极简使用
+- 体积：6k
 
 ## 🐠 示例&文档
 
@@ -10,52 +15,62 @@
 
 ## 🚀 快速开始
 
-1.  安装 vue-slim-loading
+1.  安装
 
 ```bash
 yarn add vue-slim-loading # 或 npm i -S vue-slim-loading
 ```
 
-2.  引入 vue-slim-loading
+2.  引入
 
 ```js
-// *.vue 中
-import SlimLoading from 'vue-slim-loading'
-export default {
-  /* ... */
-  components: {
-    SlimLoading,
-  },
-  /* ... */
-}
+// main.js 入口中
+import Loading from 'vue-slim-loading'
+Vue.use(Loading)
 ```
 
-3.  使用它，请参考[Demo 源码](https://github.com/wannaxiao/vue-slim-loading/blob/master/demo/App.vue)
+3.  使用，请参考[Demo 源码](https://github.com/wannaxiao/vue-slim-loading/blob/master/demo/App.vue)
+
 ```html
-  <SlimLoading :show.sync="show">
-    <!-- 这里是一个插槽，可以放置任何元素 -->
-  </SlimLoading>
+<!-- 任意元素中使用指令 v-loading -->
+<section v-loading="true">瀑布的水逆流而上</section>
 ```
 
 ## 🔌 API
 
-### Props
+### Directive
 
-| 参数 | 说明 | 类型 | 默认值 |
-| --- | --- | --- | --- |
-| show | .sync 是否显示 | Boolean | false |
-| hideOnMaskClick | 点击遮罩是否关闭弹窗 | Boolean | false |
-| forceRenderOnShow | 显示的时候是否重新渲染 | Boolean | false |
-| maskTransition | 遮罩动画 | String | slim-fade |
-| popupTransition | 弹窗动画，内置 'slim-scale', 'slim-zoom', 'slim-fade-in-bottom', 'slim-slide-in-bottom' | String | slim-scale |
-| maskClass | 遮罩的样式类 | Array | null |
-| popupClass | 弹窗的样式类 | Array | null |
-| maskStyle | 遮罩的样式 | Object | null |
-| popupStyle | 弹窗的样式 | Object | null |
-| popupPosition | 弹窗的位置，可选 'center', 'top', 'bottom' | String | center |
-| preventMaskTouchmove | 阻止遮罩 touchmove 事件，阻止移动端滚动穿透 | Boolean | true |
-| preventPopupTouchmove | 阻止弹窗 touchmove 事件，阻止移动端滚动穿透（同时会导致弹窗区域无法滚动） | Boolean | true |
-| preventBodyScroll | 阻止 body 滚动，以间接的阻止滚动穿透（不会影响弹窗区域滚动）。开启此选项，关闭 preventPopupTouchmove，可达到弹窗区域可滚动，同时阻止滚动穿透的效果 | Boolean | false |
+| 指令      | 说明     | 类型    | 默认值 |
+| --------- | -------- | ------- | ------ |
+| v-loading | 是否显示 | Boolean | false  |
+
+### Option
+
+| 选项         | 说明       | 类型   | 默认值    |
+| ------------ | ---------- | ------ | --------- |
+| text         | 文本显示   | String | null      |
+| color        | 颜色       | String | '#409EFF' |
+| maskClass    | 遮罩样式类 | Array  | null      |
+| spinnerClass | 加载样式类 | Array  | null      |
+
+```js
+// main.js 入口中
+import Loading from 'vue-slim-loading'
+Vue.use(Loading, { text: '加载中', color: 'green' })
+```
+
+### Attribute
+
+> Attribute 将会覆盖 Option
+
+| 属性          | 说明     | 类型   | 默认值    |
+| ------------- | -------- | ------ | --------- |
+| loading-text  | 文本显示 | String | null      |
+| loading-color | 颜色     | String | '#409EFF' |
+
+```html
+<section v-loading="true" loading-text="加载中">瀑布的水逆流而上</section>
+```
 
 <br>
 <br>

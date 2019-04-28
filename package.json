@@ -13,6 +13,7 @@
     "vue",
     "slim-loading",
     "vue-loading",
+    "element-loading",
     "v-loading"
   ],
   "main": "dist/vue-slim-loading.min.js",
