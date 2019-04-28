@@ -16,6 +16,7 @@
 import mixin from './mixins'
 
 export default {
+  name: 'Circular',
   mixins: [mixin],
   props: {
     color: {
