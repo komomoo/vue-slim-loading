@@ -1,41 +1,39 @@
 <template>
   <div id="app">
-    <h1>中间弹出</h1>
+    <h1>基础使用</h1>
 
-    <SlimLoading></SlimLoading>
+    <section v-loading="show">
+      瀑布的水逆流而上<br>
+      蒲公英的种子从远处飘回，聚成伞的模样<br>
+      太阳从西边升起 落向东方<br>
+      <br>
+      子弹退回枪膛<br>
+      运动员回到起跑线上<br>
+      我交回录取通知书 忘了十年寒窗<br>
+      <br>
+      厨房里飘来饭菜的香<br>
+      你把我的卷子签好名字<br>
+      关掉电视 帮我把书包背上<br>
+      <br>
+      你还在我身旁
+    </section>
+
+    <div class="btn-box">
+      <button @click="show = !show">{{ show ? '隐藏' : '显示' }}</button>
+    </div>
   </div>
 </template>
 
 <script>
-import SlimLoading from '../src'
 
 export default {
   name: 'App',
   components: {
-    SlimLoading,
   },
   data () {
     return {
-      show: false,
-      show2: false,
-      show3: false,
-      show4: false,
-      popupTransition: '',
+      show: true,
     }
-  },
-  created () {
-    this.transitionList = ['slim-scale', 'slim-zoom', 'slim-fade-in-bottom', 'slim-slide-in-bottom']
-  },
-  methods: {
-    // 显示
-    popupShow (index) {
-      this.popupTransition = this.transitionList[index] // 更换动效
-      this.show = true
-    },
-    // 隐藏
-    popupHide () {
-      this.show = false
-    },
   },
 }
 </script>
@@ -69,32 +67,13 @@ html, body {
     color: #6D7A80;
   }
 
-  .popup {
-    width: 80%;
-    height: 200px;
+  > section {
+    width: 90%;
     border-radius: 16px;
     text-align: center;
     background: #fff;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: space-around;
-
-    &.scroll {
-      overflow-y: scroll;
-      -webkit-overflow-scrolling: touch;
-    }
-
-    .close-btn {
-      font-size: 20px;
-      font-weight: 500;
-      color: $baseColor;
-      background-color: $bgColor;
-      text-align: center;
-      width: 50px;
-      height: 50px;
-      border-radius: 4px;
-    }
+    margin: 20px auto;
+    color: #303133;
   }
 
   .btn-box {
@@ -102,12 +81,12 @@ html, body {
     flex-wrap: wrap;
     justify-content: center;
 
-    .open-btn {
+    >button {
       display: block;
-      width: 60%;
-      height: 100px;
+      width: 40%;
+      height: 60px;
       margin: 15px auto;
-      font-size: 24px;
+      font-size: 20px;
       color: $baseColor;
       background-color: $bgColor;
     }
