@@ -101,11 +101,11 @@
   	"@momoko/babel-preset-vue": "^0.2.0",
   	"@momoko/eslint-config-vue": "^0.2.2",
   	"dio-bundler": "^0.3.0",
-  	"parcel-bundler": "^1.11.0",
+  	"parcel-bundler": "^1.12.3",
   	"standard-version": "^4.4.0",
-  	vue: "^2.6.7",
+  	vue: "^2.6.10",
   	"vue-hot-reload-api": "^2.3.2",
-  	"vue-template-compiler": "^2.6.7"
+  	"vue-template-compiler": "^2.6.10"
   };
   var pkg = {
   	name: name,
@@ -139,6 +139,7 @@
 
   //
   var script = {
+    name: 'Circular',
     mixins: [mixin],
     props: {
       color: {
@@ -294,7 +295,7 @@
     /* style */
     const __vue_inject_styles__ = function (inject) {
       if (!inject) return
-      inject("data-v-3387adbe_0", { source: ".vue-slim-loading-circular{height:42px;width:42px;-webkit-animation:loading-rotate 2s linear infinite;animation:loading-rotate 2s linear infinite}.vue-slim-loading-circular__path{-webkit-animation:loading-dash 1.5s ease-in-out infinite;animation:loading-dash 1.5s ease-in-out infinite;stroke-dasharray:90,150;stroke-dashoffset:0;stroke-width:2;stroke:#409eff;stroke-linecap:round}@-webkit-keyframes loading-rotate{100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}@keyframes loading-rotate{100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}@-webkit-keyframes loading-dash{0%{stroke-dasharray:1,200;stroke-dashoffset:0}50%{stroke-dasharray:90,150;stroke-dashoffset:-40px}100%{stroke-dasharray:90,150;stroke-dashoffset:-120px}}@keyframes loading-dash{0%{stroke-dasharray:1,200;stroke-dashoffset:0}50%{stroke-dasharray:90,150;stroke-dashoffset:-40px}100%{stroke-dasharray:90,150;stroke-dashoffset:-120px}}", map: undefined, media: undefined });
+      inject("data-v-7ac683cc_0", { source: ".vue-slim-loading-circular{height:42px;width:42px;-webkit-animation:loading-rotate 2s linear infinite;animation:loading-rotate 2s linear infinite}.vue-slim-loading-circular__path{-webkit-animation:loading-dash 1.5s ease-in-out infinite;animation:loading-dash 1.5s ease-in-out infinite;stroke-dasharray:90,150;stroke-dashoffset:0;stroke-width:2;stroke:#409eff;stroke-linecap:round}@-webkit-keyframes loading-rotate{100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}@keyframes loading-rotate{100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}@-webkit-keyframes loading-dash{0%{stroke-dasharray:1,200;stroke-dashoffset:0}50%{stroke-dasharray:90,150;stroke-dashoffset:-40px}100%{stroke-dasharray:90,150;stroke-dashoffset:-120px}}@keyframes loading-dash{0%{stroke-dasharray:1,200;stroke-dashoffset:0}50%{stroke-dasharray:90,150;stroke-dashoffset:-40px}100%{stroke-dasharray:90,150;stroke-dashoffset:-120px}}", map: undefined, media: undefined });
 
     };
     /* scoped */
