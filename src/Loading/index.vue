@@ -70,7 +70,7 @@ $color = #409EFF;
 .{$} {
   &-mask {
     position: absolute;
-    z-index: 1000;
+    z-index: 100;
     margin: 0;
     top: 0;
     right: 0;
