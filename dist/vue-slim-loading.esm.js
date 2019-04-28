@@ -55,7 +55,7 @@ var devDependencies = {
 	"@babel/core": "^7.3.3",
 	"@momoko/babel-preset-vue": "^0.2.0",
 	"@momoko/eslint-config-vue": "^0.2.2",
-	"dio-bundler": "^0.1.1",
+	"dio-bundler": "^0.3.0",
 	"parcel-bundler": "^1.11.0",
 	"standard-version": "^4.4.0",
 	vue: "^2.6.7",
@@ -242,7 +242,7 @@ var __vue_staticRenderFns__ = [];
   /* style */
   const __vue_inject_styles__ = function (inject) {
     if (!inject) return
-    inject("data-v-5d029760_0", { source: ".vue-slim-loading-circular{height:42px;width:42px;animation:loading-rotate 2s linear infinite}.vue-slim-loading-circular__path{animation:loading-dash 1.5s ease-in-out infinite;stroke-dasharray:90,150;stroke-dashoffset:0;stroke-width:2;stroke:#409eff;stroke-linecap:round}@-moz-keyframes loading-rotate{100%{transform:rotate(360deg)}}@-webkit-keyframes loading-rotate{100%{transform:rotate(360deg)}}@-o-keyframes loading-rotate{100%{transform:rotate(360deg)}}@keyframes loading-rotate{100%{transform:rotate(360deg)}}@-moz-keyframes loading-dash{0%{stroke-dasharray:1,200;stroke-dashoffset:0}50%{stroke-dasharray:90,150;stroke-dashoffset:-40px}100%{stroke-dasharray:90,150;stroke-dashoffset:-120px}}@-webkit-keyframes loading-dash{0%{stroke-dasharray:1,200;stroke-dashoffset:0}50%{stroke-dasharray:90,150;stroke-dashoffset:-40px}100%{stroke-dasharray:90,150;stroke-dashoffset:-120px}}@-o-keyframes loading-dash{0%{stroke-dasharray:1,200;stroke-dashoffset:0}50%{stroke-dasharray:90,150;stroke-dashoffset:-40px}100%{stroke-dasharray:90,150;stroke-dashoffset:-120px}}@keyframes loading-dash{0%{stroke-dasharray:1,200;stroke-dashoffset:0}50%{stroke-dasharray:90,150;stroke-dashoffset:-40px}100%{stroke-dasharray:90,150;stroke-dashoffset:-120px}}", map: undefined, media: undefined });
+    inject("data-v-5d029760_0", { source: ".vue-slim-loading-circular{height:42px;width:42px;-webkit-animation:loading-rotate 2s linear infinite;animation:loading-rotate 2s linear infinite}.vue-slim-loading-circular__path{-webkit-animation:loading-dash 1.5s ease-in-out infinite;animation:loading-dash 1.5s ease-in-out infinite;stroke-dasharray:90,150;stroke-dashoffset:0;stroke-width:2;stroke:#409eff;stroke-linecap:round}@-webkit-keyframes loading-rotate{100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}@keyframes loading-rotate{100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}@-webkit-keyframes loading-dash{0%{stroke-dasharray:1,200;stroke-dashoffset:0}50%{stroke-dasharray:90,150;stroke-dashoffset:-40px}100%{stroke-dasharray:90,150;stroke-dashoffset:-120px}}@keyframes loading-dash{0%{stroke-dasharray:1,200;stroke-dashoffset:0}50%{stroke-dasharray:90,150;stroke-dashoffset:-40px}100%{stroke-dasharray:90,150;stroke-dashoffset:-120px}}", map: undefined, media: undefined });
 
   };
   /* scoped */
@@ -277,7 +277,7 @@ var script$1 = {
     show: {
       // .sync 是否显示
       type: Boolean,
-      default: true
+      default: false
     },
     text: {
       // 加载文本
@@ -307,7 +307,7 @@ var __vue_staticRenderFns__$1 = [];
   /* style */
   const __vue_inject_styles__$1 = function (inject) {
     if (!inject) return
-    inject("data-v-34e91562_0", { source: ".vue-slim-loading-mask{position:absolute;z-index:1000;margin:0;top:0;right:0;bottom:0;left:0;background-color:rgba(255,255,255,.9);transition:opacity .3s}.vue-slim-loading-spinner{position:absolute;top:50%;transform:translateY(-50%);width:100%;text-align:center}.vue-slim-loading-spinner__text{color:#409eff;margin:3px 0;font-size:14px}.vue-slim-loading .loading-fade-enter,.vue-slim-loading .loading-fade-leave-active{opacity:0}", map: undefined, media: undefined });
+    inject("data-v-f3327d1e_0", { source: ".vue-slim-loading-mask{position:absolute;z-index:1000;margin:0;top:0;right:0;bottom:0;left:0;background-color:rgba(255,255,255,.9);transition:opacity .3s}.vue-slim-loading-spinner{position:absolute;top:50%;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%);width:100%;text-align:center}.vue-slim-loading-spinner__text{color:#409eff;margin:3px 0;font-size:14px}.vue-slim-loading .loading-fade-enter,.vue-slim-loading .loading-fade-leave-active{opacity:0}", map: undefined, media: undefined });
 
   };
   /* scoped */
