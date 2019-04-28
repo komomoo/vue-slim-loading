@@ -11,8 +11,13 @@
         v-show="show"
         :class="[c('-mask'), ...maskClass]">
         <div :class="[c('-spinner'), ...spinnerClass]">
-          <Circular></Circular>
-          <p v-if="text" :class="c('-spinner__text')">{{ text }}</p>
+          <Circular :color="color"></Circular>
+          <p
+            v-if="text"
+            :class="c('-spinner__text')"
+            :style="{'color': color}">
+            {{ text }}
+          </p>
         </div>
       </div>
     </transition>
@@ -33,12 +38,17 @@ export default {
     show: {
       // .sync 是否显示
       type: Boolean,
-      default: true,
+      default: false,
     },
     text: {
       // 加载文本
       type: String,
       default: null,
+    },
+    color: {
+      // 颜色
+      type: String,
+      default: '#409EFF',
     },
     maskClass: {
       // 遮罩样式类

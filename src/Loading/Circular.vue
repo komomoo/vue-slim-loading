@@ -4,6 +4,7 @@
     viewBox="25 25 50 50">
     <circle
       :class="c('-circular__path')"
+      :style="{'stroke': color}"
       cx="50"
       cy="50"
       r="20"
@@ -16,11 +17,19 @@ import mixin from './mixins'
 
 export default {
   mixins: [mixin],
+  props: {
+    color: {
+      // 颜色
+      type: String,
+      default: '#409EFF',
+    },
+  },
 }
 </script>
 
 <style lang="stylus">
 $ = vue-slim-loading;
+$color = #409EFF;
 .{$}-circular {
   height: 42px;
   width: 42px;
@@ -31,7 +40,7 @@ $ = vue-slim-loading;
     stroke-dasharray: 90, 150;
     stroke-dashoffset: 0;
     stroke-width: 2;
-    stroke: #409EFF;
+    stroke: $color;
     stroke-linecap: round;
   }
 

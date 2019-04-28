@@ -1,7 +1,7 @@
 import SlimLoading from './Loading'
 import { getStyle } from './utils'
 
-SlimLoading.install = function (Vue) {
+SlimLoading.install = function (Vue, option = {}) {
   Vue.component(SlimLoading.name, SlimLoading)
 
   const Loading = Vue.extend(SlimLoading)
@@ -9,7 +9,7 @@ SlimLoading.install = function (Vue) {
   Vue.directive('loading', {
     bind: function (el, binding, vnode) {
       const textExr = el.getAttribute('loading-text')
-      const vm = vnode.context
+      const colorExr = el.getAttribute('loading-color')
 
       if (!getStyle(el, 'position')) el.style.position = 'relative'
 
@@ -20,7 +20,9 @@ SlimLoading.install = function (Vue) {
         el: div,
         propsData: {
           show: !!binding.value,
-          text: textExr || vm[textExr],
+          text: textExr || option.text,
+          color: colorExr || option.color,
+          ...option,
         },
       })
       el.loadingInstance = loadingInstance
@@ -29,7 +31,9 @@ SlimLoading.install = function (Vue) {
 
     update: function (el, binding) {
       const textExr = el.getAttribute('loading-text')
-      if (el.loadingInstance._props.text !== textExr) el.loadingInstance._props.text = textExr
+      const colorExr = el.getAttribute('loading-color')
+      if (textExr && el.loadingInstance._props.text !== textExr) el.loadingInstance._props.text = textExr
+      if (colorExr && el.loadingInstance._props.color !== colorExr) el.loadingInstance._props.color = colorExr
       if (binding.oldValue !== binding.value) el.loadingInstance._props.show = !!binding.value
     },
 
