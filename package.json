@@ -51,7 +51,7 @@
     "@babel/core": "^7.3.3",
     "@momoko/babel-preset-vue": "^0.2.0",
     "@momoko/eslint-config-vue": "^0.2.2",
-    "dio-bundler": "^0.3.0",
+    "dio-bundler": "^0.5.2",
     "parcel-bundler": "^1.12.3",
     "standard-version": "^4.4.0",
     "vue": "^2.6.10",
