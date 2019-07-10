@@ -10,11 +10,11 @@
       <div
         v-show="show"
         :class="[c('-mask'), ...maskClass]">
-        <div :class="[c('-spinner'), ...spinnerClass]">
-          <Circular :color="color"></Circular>
+        <div :class="[c('-spinner')]">
+          <Circular :color="color" :class="loadingClass"></Circular>
           <p
             v-if="text"
-            :class="c('-spinner__text')"
+            :class="[c('-spinner__text'), ...textClass]"
             :style="{'color': color}">
             {{ text }}
           </p>
@@ -55,8 +55,13 @@ export default {
       type: Array,
       default: null,
     },
-    spinnerClass: {
+    loadingClass: {
       // 加载样式类
+      type: Array,
+      default: null,
+    },
+    textClass: {
+      // 文本样式类
       type: Array,
       default: null,
     },

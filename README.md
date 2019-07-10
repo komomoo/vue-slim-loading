@@ -51,7 +51,8 @@ Vue.use(Loading)
 | text         | 文本显示   | String | null      |
 | color        | 颜色       | String | '#409EFF' |
 | maskClass    | 遮罩样式类 | Array  | null      |
-| spinnerClass | 加载样式类 | Array  | null      |
+| loadingClass | 加载样式类 | Array  | null      |
+| textClass    | 文本样式类 | Array  | null      |
 
 ```js
 // main.js 入口中
