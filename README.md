@@ -1,7 +1,5 @@
 # vue-slim-loading
 
-> 开箱即用的 vue 加载组件，改造于 ElementUI/Loading
-
 ## ✨ 特性
 
 - 开箱即用/极简使用
@@ -24,7 +22,7 @@ yarn add vue-slim-loading # 或 npm i -S vue-slim-loading
 2.  引入
 
 ```js
-// main.js 入口中
+// main.js
 import Loading from 'vue-slim-loading'
 Vue.use(Loading)
 ```
@@ -38,13 +36,13 @@ Vue.use(Loading)
 
 ## 🔌 API
 
-### Directive
+### Directives
 
 | 指令      | 说明     | 类型    | 默认值 |
 | --------- | -------- | ------- | ------ |
 | v-loading | 是否显示 | Boolean | false  |
 
-### Option
+### Options
 
 | 选项         | 说明       | 类型   | 默认值    |
 | ------------ | ---------- | ------ | --------- |
@@ -55,12 +53,12 @@ Vue.use(Loading)
 | textClass    | 文本样式类 | Array  | null      |
 
 ```js
-// main.js 入口中
+// main.js
 import Loading from 'vue-slim-loading'
 Vue.use(Loading, { text: '加载中', color: 'green' })
 ```
 
-### Attribute
+### Attributes
 
 > Attribute 将会覆盖 Option
 
@@ -72,6 +70,12 @@ Vue.use(Loading, { text: '加载中', color: 'green' })
 ```html
 <section v-loading="true" loading-text="加载中">瀑布的水逆流而上</section>
 ```
+
+### Slots
+
+| 名称     | 说明           |
+| -------- | -------------- |
+| default  | loading 内容   |
 
 <br>
 <br>

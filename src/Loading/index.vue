@@ -11,7 +11,9 @@
         v-show="show"
         :class="[c('-mask'), ...maskClass]">
         <div :class="[c('-spinner')]">
-          <Circular :color="color" :class="loadingClass"></Circular>
+          <slot>
+            <Circular :color="color" :class="loadingClass"></Circular>
+          </slot>
           <p
             v-if="text"
             :class="[c('-spinner__text'), ...textClass]"
