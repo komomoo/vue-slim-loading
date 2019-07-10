@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.1.0"></a>
+# [1.1.0](https://github.com/wannaxiao/vue-slim-loading/compare/v1.0.2...v1.1.0) (2019-07-10)
+
+
+### Features
+
+* add slots ([c99de3f](https://github.com/wannaxiao/vue-slim-loading/commit/c99de3f))
+* props add loadingClass & textClass ([f5e7f34](https://github.com/wannaxiao/vue-slim-loading/commit/f5e7f34))
+
+
+
 <a name="1.0.2"></a>
 ## [1.0.2](https://github.com/wannaxiao/vue-slim-loading/compare/v1.0.1...v1.0.2) (2019-06-06)
 

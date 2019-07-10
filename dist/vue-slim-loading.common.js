@@ -1,5 +1,5 @@
 /*!
- * vue-slim-loading v1.0.2
+ * vue-slim-loading v1.1.0
  * Copyright (c) 2018-present, momoko <ko.momo@qq.com>
  * Released under the MIT License.
  */
@@ -45,7 +45,7 @@ function _objectSpread(target) {
 var objectSpread = _objectSpread;
 
 var name = "vue-slim-loading";
-var version = "1.0.2";
+var version = "1.1.0";
 var description = "💇 开箱即用的 vue 加载组件，改造于 ElementUI/Loading";
 var author = "momoko <ko.momo@qq.com>";
 var license = "MIT";
@@ -367,8 +367,13 @@ var script$1 = {
       type: Array,
       default: null
     },
-    spinnerClass: {
+    loadingClass: {
       // 加载样式类
+      type: Array,
+      default: null
+    },
+    textClass: {
+      // 文本样式类
       type: Array,
       default: null
     }
@@ -401,17 +406,18 @@ var __vue_render__$1 = function __vue_render__() {
     }],
     class: [_vm.c('-mask')].concat(_vm.maskClass)
   }, [_c('div', {
-    class: [_vm.c('-spinner')].concat(_vm.spinnerClass)
-  }, [_c('Circular', {
+    class: [_vm.c('-spinner')]
+  }, [_vm._t("default", [_c('Circular', {
+    class: _vm.loadingClass,
     attrs: {
       "color": _vm.color
     }
-  }), _vm._v(" "), _vm.text ? _c('p', {
-    class: _vm.c('-spinner__text'),
+  })]), _vm._v(" "), _vm.text ? _c('p', {
+    class: [_vm.c('-spinner__text')].concat(_vm.textClass),
     style: {
       'color': _vm.color
     }
-  }, [_vm._v("\n          " + _vm._s(_vm.text) + "\n        ")]) : _vm._e()], 1)])])], 1);
+  }, [_vm._v("\n          " + _vm._s(_vm.text) + "\n        ")]) : _vm._e()], 2)])])], 1);
 };
 
 var __vue_staticRenderFns__$1 = [];
@@ -419,7 +425,7 @@ var __vue_staticRenderFns__$1 = [];
 
 var __vue_inject_styles__$1 = function __vue_inject_styles__(inject) {
   if (!inject) return;
-  inject("data-v-543588c2_0", {
+  inject("data-v-b58d6dea_0", {
     source: ".vue-slim-loading-mask{position:absolute;z-index:100;margin:0;top:0;right:0;bottom:0;left:0;background-color:rgba(255,255,255,.9);transition:opacity .3s}.vue-slim-loading-spinner{position:absolute;top:50%;-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%);transform:translateY(-50%);width:100%;text-align:center}.vue-slim-loading-spinner__text{color:#409eff;margin:3px 0;font-size:14px}.vue-slim-loading .loading-fade-enter,.vue-slim-loading .loading-fade-leave-active{opacity:0}",
     map: undefined,
     media: undefined
