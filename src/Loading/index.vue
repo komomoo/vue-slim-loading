@@ -85,6 +85,10 @@ $color = #409EFF;
     left: 0;
     background-color: rgba(255, 255, 255, 0.9);
     transition: opacity 0.3s;
+
+    html.dark-mode & {
+      background-color: rgba(0, 0, 0, 0.9);
+    }
   }
 
   &-spinner {
