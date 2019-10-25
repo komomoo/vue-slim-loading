@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.1.1"></a>
+## [1.1.1](https://github.com/wannaxiao/vue-slim-loading/compare/v1.1.0...v1.1.1) (2019-10-25)
+
+
+### Features
+
+* dark mode ([32041fb](https://github.com/wannaxiao/vue-slim-loading/commit/32041fb))
+
+
+
 <a name="1.1.0"></a>
 # [1.1.0](https://github.com/wannaxiao/vue-slim-loading/compare/v1.0.2...v1.1.0) (2019-07-10)
 
