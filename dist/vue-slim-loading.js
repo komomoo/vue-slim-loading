@@ -1,6 +1,6 @@
 /*!
  * vue-slim-loading v1.1.1
- * Copyright (c) 2018-present, momoko <ko.momo@qq.com>
+ * Copyright (c) 2018-present, komo <ko.momo@qq.com>
  * Released under the MIT License.
  */
 
@@ -51,11 +51,11 @@
   var name = "vue-slim-loading";
   var version = "1.1.1";
   var description = "💇 开箱即用的 vue 加载组件，改造于 ElementUI/Loading";
-  var author = "momoko <ko.momo@qq.com>";
+  var author = "komo <ko.momo@qq.com>";
   var license = "MIT";
   var repository = {
   	type: "git",
-  	url: "https://github.com/wannaxiao/vue-slim-loading"
+  	url: "https://github.com/komomoo/vue-slim-loading"
   };
   var keywords = [
   	"vue",

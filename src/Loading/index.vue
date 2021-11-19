@@ -1,6 +1,6 @@
 /**
  * vue-slim-loading
- * @Author momoko
+ * @Author komo
  * @Date 2019/04
  */
 

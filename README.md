@@ -7,9 +7,9 @@
 
 ## 🐠 示例&文档
 
-[Demo](https://wannaxiao.github.io/vue-slim-loading/demo/dist/)
+[Demo](https://komomoo.github.io/vue-slim-loading/demo/dist/)
 
-[Demo 源码](https://github.com/wannaxiao/vue-slim-loading/blob/master/demo/App.vue)
+[Demo 源码](https://github.com/komomoo/vue-slim-loading/blob/master/demo/App.vue)
 
 ## 🚀 快速开始
 
@@ -27,7 +27,7 @@ import Loading from 'vue-slim-loading'
 Vue.use(Loading)
 ```
 
-3.  使用，请参考[Demo 源码](https://github.com/wannaxiao/vue-slim-loading/blob/master/demo/App.vue)
+3.  使用，请参考[Demo 源码](https://github.com/komomoo/vue-slim-loading/blob/master/demo/App.vue)
 
 ```html
 <!-- 任意元素中使用指令 v-loading -->
@@ -85,4 +85,4 @@ Vue.use(Loading, { text: '加载中', color: 'green' })
 
 [MIT](http://opensource.org/licenses/MIT)
 
-Copyright (c) 2018-present, momoko
+Copyright (c) 2018-present, komo
